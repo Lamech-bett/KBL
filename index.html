@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>KBL Tech | Lamech</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url('Futuristic KBL Circuit Emblem - Edited.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: white;
+      text-align: center;
+    }
+
+    .marquee {
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 10px 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      font-size: 20px;
+      font-weight: bold;
+      z-index: 1000;
+    }
+
+    .marquee span {
+      display: inline-block;
+      animation: move 12s linear infinite;
+    }
+
+    @keyframes move {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    .button {
+      display: inline-block;
+      margin: 150px 20px 0;
+      padding: 15px 30px;
+      background: rgba(255, 255, 255, 0.15);
+      border: 2px solid white;
+      border-radius: 12px;
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .button:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: scale(1.08);
+    }
+
+    section {
+      padding: 100px 20px;
+      margin-top: 100px;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+      color: #00ccff;
+    }
+
+    p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: auto;
+      color: #00ccff;
+    }
+
+    a {
+      color: #66d9ff;
+    }
+
+    .cool-input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: none;
+      background-color: #102840;
+      color: #ffffff;
+      transition: 0.3s ease;
+      box-shadow: 0 0 5px #00ccff40;
+    }
+
+    .cool-input:focus {
+      outline: none;
+      box-shadow: 0 0 15px #00ccff, 0 0 30px #00ccff70;
+      transform: scale(1.02);
+    }
+
+    .cool-button {
+      padding: 10px 20px;
+      background-color: #00ccff;
+      border: none;
+      border-radius: 5px;
+      color: #000;
+      font-size: 16px;
+      font-weight: bold;
+      transition: 0.3s ease;
+      box-shadow: 0 0 5px #00ccff60;
+      cursor: pointer;
+    }
+
+    .cool-button:hover {
+      box-shadow: 0 0 20px #00ccff, 0 0 40px #00ccff;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Moving Banner -->
+  <div class="marquee">
+    <span>WELCOME TO KBL TECH,,. THE DILLIGENT HAND. </span>
+  </div>
+
+  <!-- Navigation Buttons -->
+  <div style="margin-top: 200px;">
+    <a href="#about" class="button">KBL</a>
+    <a href="#projects" class="button">[DILLIGENTHAND]</a>
+    <a href="#contact" class="button">CONTACTS</a>
+  </div>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>KBL</h2>
+    <p>This is KBL, the upgrowing tech investor and innovator, lifting unimaginable dreams to their feet not only in thoughts but also practically in the field of tech.</p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>DILLIGENTHAND</h2>
+    <p>I’ve built a cleaning robot using VEX components, a robotic crane, and this very website! More projects are coming—autonomous machines, maybe even a drone next. Stay tuned!</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>CONTACTS</h2>
+    <p>Email: <a href="mailto:kipronolamech@gmail.com">kipronolamech@gmail.com</a><br>
+      WhatsApp: +254 111413680<br>
+      Or just shout “YO LAMECH!” into the wind—I’ll probably hear you 😎🌪️</p>
+
+    <form id="contact-form" method="POST" action="https://formsubmit.co/el/zetuwi" style="margin-top: 30px; max-width: 500px; margin: 0 auto;">
+      <input type="text" name="name" placeholder="Your Name" class="cool-input" required>
+      <input type="email" name="email" placeholder="Your Email" class="cool-input" required>
+      <textarea name="message" rows="5" placeholder="Your Message" class="cool-input" required></textarea>
+      <button type="submit" class="cool-button">Send Message</button>
+    </form>
+  </section>
+
+  <!-- AJAX Magic for Thank You Popup -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById("contact-form");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+
+        fetch(form.action, {
+          method: "POST",
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        }).then(response => {
+          if (response.ok) {
+            alert("✅ Message sent! KBL got you.");
+            form.reset();
+          } else {
+            alert("❌ Something went wrong. Try again.");
+          }
+        }).catch(error => {
+          alert("❌ Error sending message. Check your internet.");
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
