@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gift for Nazlin Cherotich 💖</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe Script', cursive;
+      background-color: #1e3d8f;
+      color: #f4e6ff;
+      text-align: center;
+      border: 20px solid navy;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .banner {
+      background: linear-gradient(to right, pink, hotpink, violet);
+      color: white;
+      padding: 10px 0;
+      font-size: 22px;
+      font-weight: bold;
+      animation: moveBanner 12s linear infinite;
+      text-shadow: 0 0 5px #fff;
+    }
+
+    @keyframes moveBanner {
+      0% { background-position: 0% }
+      100% { background-position: 100% }
+    }
+
+    h1 {
+      font-family: 'Brush Script MT', cursive;
+      color: pink;
+      font-size: 60px;
+      text-shadow: 0 0 25px pink, 0 0 45px hotpink;
+      margin-top: 30px;
+    }
+
+    .gift {
+      background: pink;
+      border: none;
+      padding: 20px 40px;
+      border-radius: 20px;
+      font-size: 20px;
+      cursor: pointer;
+      color: purple;
+      box-shadow: 0 0 15px white;
+      transition: 0.3s;
+    }
+
+    .gift:hover {
+      background: hotpink;
+      color: white;
+      transform: scale(1.1);
+    }
+
+    .hex {
+      display: inline-block;
+      position: relative;
+      padding: 20px 40px;
+      margin: 20px;
+      color: #f9dfff;
+      background: linear-gradient(145deg, #4b0082, #8b008b);
+      clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      transition: 0.4s;
+      text-shadow: 0 0 5px #fff;
+    }
+
+    .hex:hover {
+      background: linear-gradient(145deg, #ff69b4, #db7093);
+      transform: scale(1.1);
+      box-shadow: 0 0 20px pink;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    #message p {
+      font-size: 20px;
+      color: #f4d0ff;
+      margin: 20px;
+      line-height: 1.6;
+      animation: riseUp 3s ease-in-out;
+      text-shadow: 0 0 6px #fff;
+    }
+
+    @keyframes riseUp {
+      from { transform: translateY(50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    input, textarea {
+      width: 80%;
+      max-width: 400px;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 10px;
+      border: 2px solid pink;
+      background: #f9f0ff;
+      color: #4b0082;
+      font-size: 16px;
+    }
+
+    button[type="submit"] {
+      background: pink;
+      color: #4b0082;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button[type="submit"]:hover {
+      background: hotpink;
+      color: white;
+    }
+
+    .heart {
+      font-size: 80px;
+      text-align: center;
+      margin-top: 20px;
+      animation: pulse 1.2s infinite;
+    }
+
+    .accept-heart {
+      color: pink;
+      text-shadow: 0 0 20px pink, 0 0 40px hotpink;
+    }
+
+    .reject-heart {
+      color: red;
+      text-shadow: 0 0 20px red, 0 0 40px darkred;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.2); opacity: 0.7; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    /* Thank-you popup */
+    #thankYouPopup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(255, 182, 193, 0.95);
+      color: #4b0082;
+      padding: 30px 50px;
+      border-radius: 20px;
+      font-size: 22px;
+      box-shadow: 0 0 25px pink;
+      z-index: 999;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translate(-50%, -60%); }
+      to { opacity: 1; transform: translate(-50%, -50%); }
+    }
+  </style>
+</head>
+<body>
+  <div class="banner">💖 Nazlin Cherotich 💖 Nazlin Cherotich 💖 Nazlin Cherotich 💖</div>
+  <h1>Nazlin Cherotich</h1>
+
+  <button class="gift" onclick="openGift()">🎁 Open Gift</button>
+
+  <div id="giftContent" class="hidden">
+    <h2 style="color:pink;">From Lamech 💙</h2>
+    <button class="hex" onclick="showSection('message')">View Message</button>
+    <button class="hex" onclick="showSection('contact')">Contact Me</button>
+    <button class="hex" onclick="showSection('response')">Response</button>
+  </div>
+
+  <div id="message" class="hidden">
+    <p>Hey Nazlin 💞,<br>
+   Hello Nazlin. Thanks for taking your time to read this message.
+	 This website is my Gift for you Nazlin.
+Don’t think so much about this step that I have taken, taking into consideration my interaction with you 
+is what has caused me to do this.
+Alow me to say everything I ever wanted to tell you if only you had given me the chance.
+
+	You were once My Crush Cherotich,!! I used to admire you,
+ I had dreamt of having you, I made wishes, made up my thoughts towards you but all was in vain ,,
+			 I repeat In VAIN.
+Anyway, I waved that away,, remember you are the one who corrected me in pronouncing the word vitue,,. Well, honesty is a virtue,
+	 and today I wanna be honest with you that I wanted to LOVE YOU.
+
+			When that didn’t happen,
+	 I continued with my life and made a decision never to do anything that reminds me of you,.
+		 But  then on a certain Saturday, I met you with your friend at the bridge..
+
+You ignited a fire in me which had long ceased,,
+  well, to be sincere, when you shook my hand, actually dissolved in an imaginary magical world,
+	 not only that,,,, when you greeted me saying “Mambo” I got confused, I melted in LOVE,, Nazlin.
+
+	You caused me memories that were long gone,
+		 made me have nostalgia
+	 and not only did I realize that you were still ringing in my mind 
+		but also noticed how much I lacked emotionally that only you had it.
+
+I never wanted to say that much but Manzee,, Imenibidi,,,,. 
+		I would just like to hear from you for Once Nazlin.
+
+ We have never talked you know,,,I had retreated and only wanted friendship from you ,
+			, but ,,,
+			,,things changed.
+
+	I wish that I could forget all about you to stop hurting myself with thoughts of you. 
+		Plz,, give me a response this time Naz,,
+	 I had tried my best looking for you but you you even changed your facebook account because of me,, 	
+			hope this website will be of help,,,.	
+		 Allow me to say sorry if I have intruded into you life,,.
+		Sorry again if this message hurts you,, but I had to say,, it.
+
+And as I conclude:
+	Just tell me one thing, will you give me a chance to speak with you even once,,,
+			 orr should  I just let GO..!
+Your Response will be a GREAT remedy to my lifes adaptability,,.
+
+You have my contacts ,, or just leave a message at the  space.. 
+
+🌸</p>
+  </div>
+
+  <div id="contact" class="hidden">
+    <h2 style="color:pink;">Contact Me 💌</h2>
+    <p>📱 Phone: 0111413680<br>📧 Email: kipronolamech@gmail.com</p>
+    <form id="giftForm" action="https://formspree.io/f/xeorzlyo" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="4" placeholder="Write your response here..." required></textarea>
+      <input type="hidden" name="_subject" value="New response from Nazlin 💌">
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <div id="response" class="hidden">
+    <h2 style="color:pink;">Make Your Response 💕</h2>
+    <div class="response-buttons">
+      <button class="hex accept" onclick="showHeart('accept')">Accept</button>
+      <button class="hex reject" onclick="showHeart('reject')">Reject</button>
+    </div>
+
+    <div id="heartAnimation" class="hidden">
+      <div id="acceptHeart" class="heart accept-heart">❤️</div>
+      <div id="rejectHeart" class="heart reject-heart">💔</div>
+    </div>
+  </div>
+
+  <div id="thankYouPopup">💖 Thank you, Nazlin! Your message has been sent 💌</div>
+
+  <script>
+    function openGift() {
+      document.getElementById('giftContent').classList.remove('hidden');
+    }
+
+    function showSection(id) {
+      const sections = ['message', 'contact', 'response'];
+      sections.forEach(sec => document.getElementById(sec).classList.add('hidden'));
+      document.getElementById(id).classList.remove('hidden');
+    }
+
+    function showHeart(type) {
+      document.getElementById('heartAnimation').classList.remove('hidden');
+      const acceptHeart = document.getElementById('acceptHeart');
+      const rejectHeart = document.getElementById('rejectHeart');
+
+      if (type === 'accept') {
+        acceptHeart.style.display = 'block';
+        rejectHeart.style.display = 'none';
+      } else {
+        acceptHeart.style.display = 'none';
+        rejectHeart.style.display = 'block';
+      }
+    }
+
+    // Handle form submit (thank you popup)
+    const form = document.getElementById('giftForm');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+      if (response.ok) {
+        document.getElementById('thankYouPopup').style.display = 'block';
+        form.reset();
+        setTimeout(() => {
+          document.getElementById('thankYouPopup').style.display = 'none';
+        }, 4000);
+      } else {
+        alert("Oops! Something went wrong. Try again please.");
+      }
+    });
+  </script>
+</body>
+</html>
